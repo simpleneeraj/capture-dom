@@ -1,0 +1,93 @@
+{
+	"name": "capture-dom",
+	"author": "neerajcodes",
+	"version": "0.2.0",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"module": "dist/capture-dom.esm.js",
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"start": "tsdx watch --format cjs",
+		"build": "tsdx build --format cjs",
+		"test": "tsdx test --passWithNoTests",
+		"lint": "tsdx lint",
+		"lint:fix": "tsdx lint --fix",
+		"commit": "git-cz",
+		"prepare": "tsdx build --format cjs",
+		"size": "size-limit",
+		"publish": "npm publish",
+		"release": "release-it"
+	},
+	"peerDependencies": {
+		"react": ">=16"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "tsdx lint"
+		}
+	},
+	"prettier": {
+		"semi": true,
+		"printWidth": 80,
+		"proseWrap": "never",
+		"arrowParens": "avoid",
+		"trailingComma": "es5",
+		"singleQuote": true,
+		"bracketSpacing": true,
+		"requirePragma": true,
+		"bracketSameLine": true
+	},
+	"size-limit": [
+		{
+			"path": "dist/capture-dom.cjs.development.js",
+			"limit": "12 KB"
+		},
+		{
+			"path": "dist/capture-dom.cjs.production.min.js",
+			"limit": "11 KB"
+		},
+		{
+			"path": "dist/capture-dom.esm.js",
+			"limit": "12 KB"
+		},
+		{
+			"path": "dist/capture-dom.umd.development.js",
+			"limit": "12 KB"
+		},
+		{
+			"path": "dist/capture-dom.umd.production.min.js",
+			"limit": "11 KB"
+		}
+	],
+	"devDependencies": {
+		"@size-limit/preset-small-lib": "^7.0.8",
+		"@types/react": "^17.0.39",
+		"@types/react-dom": "^17.0.11",
+		"husky": "^7.0.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"release-it": "^14.12.5",
+		"size-limit": "^7.0.8",
+		"tsdx": "^0.14.1",
+		"tslib": "^2.3.1",
+		"typescript": "^3.9.10"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/neerajcodes/capture-dom.git"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"git": {
+		"commitMessage": "chore: release v${version}"
+	}
+}

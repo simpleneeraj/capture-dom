@@ -1,0 +1,46 @@
+{
+  "name": "dom-to-screenshot",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nextauthjs/docs.git"
+  },
+  "scripts": {
+    "start": "docusaurus start",
+    "dev": "npm run start",
+    "build": "docusaurus build",
+    "docusaurus": "docusaurus",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "lint": "prettier .",
+    "lint:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-beta.17",
+    "@docusaurus/preset-classic": "^2.0.0-beta.17",
+    "@docusaurus/remark-plugin-npm2yarn": "^2.0.0-beta.17",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": false
+  }
+}
